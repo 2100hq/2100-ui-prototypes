@@ -61,69 +61,93 @@
     </ul>
   </nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h5>Manage Tokens</h5>
-              </div>
-              <div class="card-body">
-<!--                 <p>Allocate DAI to start minting tokens.  They will show up here when minted.</p> -->
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">Asset</th>
-                      <th scope="col">0xabc</th>
-                      <th scope="col">2100</th>
-                      <th scope="col">Action</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>DAI</td>
-                      <td>100</td>
-                      <td>0</td>
-                      <td><a href="">lock</a></td>
-                      <td>0/10 confirmations</td>
-                    </tr>
-                    <tr>
-                      <td>$vitalikbuterin</td>
-                      <td>0</td>
-                      <td>0.34</td>
-                      <td><a href="">mint as ERC-20</a></td>
-                      <td>pending</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Lock DAI</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2><img src="../img/dai.png" style="width: 30px;"/> 0</h2> 
+          <hr/>
+          <p class="small">Add DAI to the 2100 smart-contract to make it available for staking. You can withdraw your DAI at any time.</p>
+          <a href="lock-dai-unconfirmed.html">Add DAI</a></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Create Transaction</button>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h5>History</h5>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row justify-content-center align-items-center" style="text-align: center; padding-bottom: 2rem; padding-top: 3rem;">
+                    <div class="col-md-3">
+                      <div class="contract-balance">
+                        <p><img src="../img/metamask-identicon.png" style="width: 25px;">
+                        26 DAI available</p>
+                      </div>
+                      <hr>
+                      <h1 style="font-size: 4rem;"><img src="../img/dai.png" style="width: 30px;"/> 74</h1> 
+                      <hr>
+                    </div>
+                    <div class="col-md-3">                      <a class="btn btn-small btn-light" href=""><i class="fas fa-arrow-up"></i></a>
+                      <a class="btn btn-small btn-light" href=""><i class="fas fa-arrow-down"></i></a>
+                      <a class="btn btn-small btn-light" href=""><i class="fas fa-lock"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-3">
+                  <div class="card-body">
+                    <table class="table table-sm">
+                      <thead>
+                        <tr>
+                          <th scope="col">Asset</th>
+                          <th scope="col">2100</th>
+                          <th scope="col">Mint</th>
+                          <th scope="col">0xabc</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>$vitalikbuterin</td>
+                          <td>0.34</td>
+                          <td><a href="">mint as ERC-20</a></td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>$alice</td>
+                          <td>0.34</td>
+                          <td><a href="">mint as ERC-20</a></td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>$bob</td>
+                          <td>0.34</td>
+                          <td><a href="">mint as ERC-20</a></td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
                 <table class="table table-sm">
                   <thead>
                     <tr>
@@ -142,11 +166,13 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</body>
-
-</html>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </html>
