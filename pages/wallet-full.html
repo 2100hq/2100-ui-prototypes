@@ -61,119 +61,133 @@
     </ul>
   </nav>
 
+
   <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="mintedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Lock DAI</h5>
+          <h5 class="modal-title" id="exampleModalCenterTitle">minted 0.34 $vitalikbuterin</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <h2><img src="../img/dai.png" style="width: 30px;"/> 0</h2> 
-          <hr/>
-          <p class="small">Add DAI to the 2100 smart-contract to make it available for staking. You can withdraw your DAI at any time.</p>
-          <a href="lock-dai-unconfirmed.html">Add DAI</a></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Create Transaction</button>
+          <div>
+            <a href="">Broadcast transaction</a><br/>
+            <small>Estimated Gas Cost 0.09 DAI</small>
+          </div>
+          <hr>
+          <div class="clipboard p-2 bg-light" style="overflow: scroll">
+            {
+              token: "0xeea55aadf412265f14ea0bea74527670684a0f4d"
+              account: "0x61ba4d3ed7b19ec027ee7273119227127c536661",
+              amount: "2100000000000",
+              salt: "8324723948234923874324",
+              hash: "0xe1383f5796e54b82d2099f559e26ac8fa19ff2727f841bb6c03bb9a29dffb6b8",
+              v: 27,
+              r: "0xe1383f5796e54b82d2099f559e26ac8fa19ff2727f841bb6c03bb9a29dffb6b8"
+              s: "0xe1383f5796e54b82d2099f559e26ac8fa19ff2727f841bb6c03bb9a29dffb6b8"
+            }
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-light">Copy</button>
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row justify-content-center align-items-center" style="text-align: center; padding-bottom: 2rem; padding-top: 3rem;">
+                  <div class="col-md-4">
+                    <div class="contract-balance">
+                      <p><img src="../img/metamask-identicon.png" style="width: 25px;">
+                      150 DAI available</p>
+                    </div>
+                    <hr>
+                    <h1 style="font-size: 4rem;"><img src="../img/dai.png" style="width: 45px;"/> 850</h1> 
+                    <hr>
+                    <a class="btn btn-small btn-light" href=""><i class="fas fa-arrow-up"></i></a>
+                    <a class="btn btn-small btn-light" href="wallet.html"><i class="fas fa-arrow-down"></i></a>
+                  </div>
+                  <div class="col-md-1">
+                    <a class="btn btn-small btn-light" href=""><i class="fas fa-lock"></i></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <div class="card-body">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">Asset</th>
+                        <th scope="col">2100</th>
+                        <th scope="col">Mint</th>
+                        <th scope="col">0xabc</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>$vitalikbuterin</td>
+                        <td>0</td>
+                        <td><a class="btn disabled" href="">mint as ERC-20</a></td>
+                        <td>0.34</td>
+                      </tr>
+                      <tr>
+                        <td>$alice</td>
+                        <td>0.34</td>
+                        <td><a class="btn btn-light" href="">mint as ERC-20</a></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>$bob</td>
+                        <td>0.34</td>
+                        <td><a class="btn btn-light" href="">mint as ERC-20</a></td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>July 23, 4:30pm</td>
+                    <td><a href="" data-toggle="modal" data-target="#mintedModal">minted 0.34 $vitalikbuterin</a></td>
+                  </tr>
+                  <tr>
+                    <td>July 23, 2:04pm</td>
+                    <td>locked 850 DAI</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row justify-content-center align-items-center" style="text-align: center; padding-bottom: 2rem; padding-top: 3rem;">
-                    <div class="col-md-4">
-                      <div class="contract-balance">
-                        <p><img src="../img/metamask-identicon.png" style="width: 25px;">
-                        150 DAI available</p>
-                      </div>
-                      <hr>
-                      <h1 style="font-size: 4rem;"><img src="../img/dai.png" style="width: 45px;"/> 850</h1> 
-                      <hr>
-                      <a class="btn btn-small btn-light" href=""><i class="fas fa-arrow-up"></i></a>
-                      <a class="btn btn-small btn-light" href="wallet.html"><i class="fas fa-arrow-down"></i></a>
-                    </div>
-                    <div class="col-md-1">
-                      <a class="btn btn-small btn-light" href=""><i class="fas fa-lock"></i></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mt-3">
-                  <div class="card-body">
-                    <table class="table table-sm">
-                      <thead>
-                        <tr>
-                          <th scope="col">Asset</th>
-                          <th scope="col">2100</th>
-                          <th scope="col">Mint</th>
-                          <th scope="col">0xabc</th>
-
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>$vitalikbuterin</td>
-                          <td>0</td>
-                          <td><a class="btn disabled" href="">mint as ERC-20</a></td>
-                          <td>0.34</td>
-                        </tr>
-                        <tr>
-                          <td>$alice</td>
-                          <td>0.34</td>
-                          <td><a class="btn btn-light" href="">mint as ERC-20</a></td>
-                          <td>0</td>
-                        </tr>
-                        <tr>
-                          <td>$bob</td>
-                          <td>0.34</td>
-                          <td><a class="btn btn-light" href="">mint as ERC-20</a></td>
-                          <td>0</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">Date</th>
-                      <th scope="col">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>July 23, 4:30pm</td>
-                      <td><a href=>minted 0.34 $vitalikbuterin</a></td>
-                    </tr>
-                    <tr>
-                      <td>July 23, 2:04pm</td>
-                      <td>locked 850 DAI</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </html>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </html>
