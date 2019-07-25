@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -48,54 +48,65 @@
           <a class="nav-link" href="wallet.html"><img src="../img/dai.png" style="width: 16px;"/>0/0</a>
         </li>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         0xAb3 <img src="../img/metamask-identicon.png" style="width: 25px;">
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           0xAb3 <img src="../img/metamask-identicon.png" style="width: 25px;">
+         </a>
+         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="sync-add.html">Manage</a>
-                    <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div>
 
           <a class="dropdown-item" href="accounts-sign-in.html">Sign Out</a>
         </div>
       </li>
-      </ul>
+    </ul>
   </nav>
 
   <div class="container-fluid" style="">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-5">
         <div class="card">
           <div class="card-body">
             <div class="piechart" style="fill: #333;"></span>
               <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link" href="sync-add.html">Add Asset</a>
+                  <a class="nav-link " href="sync-add.html">Create</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="sync-dispute.html">Dispute Asset</a>
+                  <a class="nav-link" href="sync-dispute.html">Name Change</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="sync-claim.html">Claim Owners Reward</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="sync-optout.html">Opt Out</a>
+                  <a class="nav-link active bg-danger" href="sync-optout.html">Opt Out</a>
                 </li>
               </ul>
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">
-                  <h5>Opting out of 2100</h5>
-                  <hr/>
-                  <p>If you don't want to participate in 2100, you may opt out of the protocol. If your account does not yet have a corresponding 2100 asset, it will be added to a blacklist so that the asset cannot be created. If your account already has a 2100 asset, the assets identifier will be scrambled so that it no longer references your account.</p>
-                  <p>Warning: Opting out of your account is permanent.  Once you blacklist your account from 2100 it can never be added again.  Only the owner of an account can opt out of 2100.</p>
-                  <p>To opt out of 2100, please Tweet exactly the following from the relevant account:</p>
-                <div class="form-group">
-                <label for="exampleFormControlTextarea1"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">I would like to permanently opt out of 2100 and blacklist or destroy $twitter:[your_account_identifier].</textarea>
-              </div>
-                <button type="button" class="btn btn-light" style="margin-bottom:1rem;">Copy</button>
-                </div>
+                <div class="col-md-12">
+                  <h5>Destroy your 2100</h5>
+                  <p class="text-danger">Warning: This process is irreversible</p>
+                  <p>To destroy your 2100 asset, digitally sign the message below and tweet it out.</p>
+                  <form>
+                    <div class="form-row align-items-center">
+                      <div class="col-md-12">
+                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                        <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="col-md-12">
+                        <a class="btn btn-primary mb-2" href="sync-optout-2.html"><i class="fas fa-edit"></i></i> Sign</a>
+                      </div>
+                    </div>
+                  </form>
+<!--                   <div class="tweet-content">
+                    @2100hq add me: 0xA855C20A1351AcD2690c716E2709C7dfF3978D12
+                  </div>
+                  <button class="btn btn-small btn-primary">Copy</button>
+                </div> -->
               </div>
             </div>
           </div>

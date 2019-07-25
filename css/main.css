@@ -10,3 +10,11 @@ body{
 .container-fluid{
   height: 100%;
 }
+
+.tweet-content{
+	padding: 1rem;
+	margin: 1rem 0;
+	background-color: ;
+	border: 1px solid lightblue;
+	border-radius: 3px;
+}

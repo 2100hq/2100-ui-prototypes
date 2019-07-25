@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -48,67 +48,64 @@
           <a class="nav-link" href="wallet.html"><img src="../img/dai.png" style="width: 16px;"/>0/0</a>
         </li>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         0xAb3 <img src="../img/metamask-identicon.png" style="width: 25px;">
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           0xAb3 <img src="../img/metamask-identicon.png" style="width: 25px;">
+         </a>
+         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="sync-add.html">Manage</a>
-                    <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div>
 
           <a class="dropdown-item" href="accounts-sign-in.html">Sign Out</a>
         </div>
       </li>
-      </ul>
+    </ul>
   </nav>
 
   <div class="container-fluid" style="">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-5">
         <div class="card">
           <div class="card-body">
             <div class="piechart" style="fill: #333;"></span>
               <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link active" href="sync-add.html">Add Asset</a>
+                  <a class="nav-link active" href="sync-add.html">Create</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sync-dispute.html">Dispute Asset</a>
+                  <a class="nav-link" href="sync-dispute.html">Name Change</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sync-claim.html">Claim Owners Reward</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sync-optout.html">Opt Out</a>
+                  <a class="nav-link text-danger" href="sync-optout.html">Opt Out</a>
                 </li>
               </ul>
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">
-                  <h5>Add an asset to the 2100 protocol</h5>
-                  <hr/>
-                  <p>If an asset does not exist in 2100, you can add it yourself.</p>
-                  <ol>
-                    <li>Fill out the form below</li>
-                    <li>Copy and Tweet the text it generates</li>
-                    <li>After the Tweet is confirmed by our Oracle, we will @notify you.</li>
-                    <li>The asset will be available in the <a href="">Discover</a> tab</li>
-                  </ol>
-
+                <div class="col-md-12">
+                  <h5>Create your 2100</h5>
+                  <p>To create the 2100 asset for an account that you own, add the account name below, digitally sign the message and tweet it out.</p>
                   <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Your Handle</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@yourhandle">
-                      <small id="emailHelp" class="form-text text-muted">We will Tweet you when the asset has been added.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Account to add to 2100</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="@accountToAdd">
+                    <div class="form-row align-items-center">
+                      <div class="col-md-12">
+                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                        <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="col-md-12">
+                        <a class="btn btn-primary mb-2" href="sync-add-2.html"><i class="fas fa-edit"></i></i> Sign</a>
+                      </div>
                     </div>
                   </form>
-                  <h5>I, <span style="color: grey">@yourhandle</span>, would like to add <span style="color: lightgrey">@accountToAdd</span> to the @2100hq alpha!</h5>
+<!--                   <div class="tweet-content">
+                    @2100hq add me: 0xA855C20A1351AcD2690c716E2709C7dfF3978D12
+                  </div>
                   <button class="btn btn-small btn-primary">Copy</button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
