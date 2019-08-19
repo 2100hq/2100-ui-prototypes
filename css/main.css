@@ -37,3 +37,26 @@ body{
 .alert-light{
 	border: 1px solid #ececf6;
 }
+
+.stake-dots span {
+    cursor: pointer;
+    height: .75rem;
+    width: .75rem;
+    display: inline-block;
+    margin-right: 0.25em;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+}
+
+.stake0.active {
+    background-color: rgb(217, 224, 209);
+    border-color: rgb(217, 224, 209);
+}
+
+.table-leader{
+	font-size: 1.1rem;
+}
+
